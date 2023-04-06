@@ -1,0 +1,14 @@
+---
+import type { Codepen as CodepenType } from "../types";
+
+interface Props {
+    codepen: CodepenType;
+}
+const { codepen } = Astro.props;
+---
+
+<div class="card">
+    <div>{codepen.id}</div>
+    <div>{codepen.name}</div>
+    <div><a href={codepen.link} target="_blank">Link</a></div>
+</div>

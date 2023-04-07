@@ -8,7 +8,14 @@ const { codepen } = Astro.props;
 ---
 
 <div class="card">
-    <div>{codepen.id}</div>
-    <div>{codepen.name}</div>
-    <div><a href={codepen.link} target="_blank">Link</a></div>
+    <iframe
+        title={codepen.name}
+        src={codepen.link}
+        class="codepen-iframe"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        allowtransparency="true"
+        sandbox="allow-scripts allow-same-origin"
+        loading="lazy"></iframe>
 </div>

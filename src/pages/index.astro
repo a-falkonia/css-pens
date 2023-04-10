@@ -5,5 +5,7 @@ import Card from "../components/Card.astro";
 ---
 
 <MainLayout title="css pens">
-    {CODEPENS.map((c) => <Card codepen={c} />)}
+    <div class="codepen-grid">
+        {CODEPENS.map((c) => <Card codepen={c} />)}
+    </div>
 </MainLayout>
